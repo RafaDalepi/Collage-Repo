@@ -13,15 +13,14 @@ int main(){
 
     char * token = strtok(letters, " ");
 
-   while( token != NULL ) {
-        // printf( " %s\n", token ); 
-        token = strtok(NULL, " ");
-        if (token == "the"){
-            aparitions++;
-        }else{
-            rest++;       
-        }
-        printf("%s\n %d - %d\n", token, aparitions, rest);
+    if (token == "the"){
+        aparitions++;
+        printf("AHOY");
+    }else{
+        rest++;       
     }
+
+    printf("String:%s\nApparitions: %d\nRest: %d\n", token, aparitions, rest);
 }
+
     
