@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": false,
-      "cwd": "/workspaces/Collage-Repo/Programming 2",
-      "program": "/workspaces/Collage-Repo/Programming 2/build/Debug/outDebug",
+      "cwd": "/workspaces/Collage-Repo",
+      "program": "/workspaces/Collage-Repo/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
