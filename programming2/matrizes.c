@@ -61,9 +61,6 @@ void troca_linhas(int mat[MAX][MAX], int l1, int l2){
     }
 } 
 
-int soma_transposta(int mat[MAX][MAX]){
-    int aux, i , j;
-}
 int indentidade(int mat[MAX][MAX]){
     for (int i = 0; i < MAX; i++){
         for (int j = 0; j < MAX; j++){
@@ -106,22 +103,24 @@ void soma_linha(int mat[MAX][MAX], int linha[MAX]){
 }
 
 //fazer m1200
-void soma_coluna(int mat[MAX][MAX], int coluna[MAX]){
-    int aux, aux2[MAX],num, soma_mat;
+void soma_coluna(int mat[MAX][MAX],int vet[MAX + 1]){
+    
+    int aux, num, soma_mat;
+    aux = 0;
 
-    for (int j = 0; j < MAX; j++){
-        coluna[j] =  0; 
+    for (int j = MAX-1; j >= 0; j--){
+    soma_mat = aux;  
         for (int i = 0; i < MAX; i++){
-            coluna[j] += mat[i][j];
+            soma_mat += mat[i][j];
         } 
 
-        num = coluna[j] % 10;
-        aux = coluna[j] / 10;
-        coluna[j] = num + aux;
+    vet[j+1] = soma_mat % 10;
+    aux = soma_mat / 10;
 
-        escreve_vetor(coluna);
-        printf("\n");
     }
+    vet[0] = aux;
+    escreve_vetor(vet);
+    printf("\n");
 }
 
 int main(){
@@ -130,10 +129,6 @@ int main(){
     seta_matriz(mat);
     
     escreve_matriz(mat);
-    
-    soma_coluna(mat, coluna);
+
 }
 
-// 1 1 1
-// 1 1 1 
-// 1 1 1 
