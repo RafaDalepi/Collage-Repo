@@ -1,28 +1,31 @@
 #include <stdio.h>
+#include <string.h>
 
-#define N 100
+const int N = 100;
 
-//exercicio n°3
+    // j=0;
 
+    // for (i = 0; str1[i] != '\0'; i++){
+    //     str2[j++] = str1[i];  
+    //     str2[j++] = str1[i];  
+    // }
+
+    // str2[j] ='\0';
 
 int main(){
-    char str[N] = "oi";
-    char str2[N];
-    int i, j;
+    char str1[N], str2[N];
+    int j;
     
     printf("digite a string: \n");
-    gets(str);
+    fgets(str1, N, stdin);
 
     j=0;
 
-    for (i = 0; i != '\0'; i++){
-        str2[j++] = str[i];  
-        str2[j++] = str[i];  
+    for (int i = 0; str1[i] != '\0'; i++){
+        str2[j++] = str1[i];
+        str2[j++] = ' ';
     }
-
-    str2[j] ='\0';
-
+    
     printf("%s\n", str2);
-        
-
+    
 }
