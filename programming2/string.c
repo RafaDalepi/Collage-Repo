@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include <math.h>
 #include <ctype.h>
 
 const int N = 100;
@@ -80,6 +81,24 @@ char converte_binario(int num, char str[N]){
         str[f] = aux;
     }
 }
+//bug
+int converte_hexadecimal(char str[N]){
+    
+    int expo = strlen(str)-1, num=0, i;
+
+    for(i = 0; str[i] != '\0'; i++, expo--){
+        if(str[i] >= '0' && str[i] <= '9'){
+            num += (str[i] - '0') * pow(16, expo);
+        }else{
+            num += (toupper(str[i]) - 55) * pow(16, expo);
+        }
+    }
+
+    return(num);
+}
+
+//fazer exercicio 4  Fazer a soma por 10
+//int to hexa
 
 int main(){
     char str[N];
@@ -88,7 +107,7 @@ int main(){
     printf("Digite o numero: \n");
     scanf("%d", &num);
 
-    converte_binario(num, str);
+    converte_hexadecimal(str);
     printf("Numero convertido: %s\n", str);
 
 }
