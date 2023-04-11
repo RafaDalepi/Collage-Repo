@@ -81,23 +81,35 @@ char converte_binario(int num, char str[N]){
         str[f] = aux;
     }
 }
-//bug
-int converte_hexadecimal(char str[N]){
+// bug the compiler won't compile because of the POW() function
+// Use """"gcc -o sphere sphere.c -lm"""" to compile the code and """"make ./string"""" to run the code whenever it may be needed
+// int converte_hexadecimal(char str[N]){
     
-    int expo = strlen(str)-1, num=0, i;
+//     int expo = strlen(str)-1, num=0, i;
 
-    for(i = 0; str[i] != '\0'; i++, expo--){
-        if(str[i] >= '0' && str[i] <= '9'){
-            num += (str[i] - '0') * pow(16, expo);
-        }else{
-            num += (toupper(str[i]) - 55) * pow(16, expo);
-        }
-    }
+//     for(i = 0; str[i] != '\0'; i++, expo--){
+//         if(str[i] >= '0' && str[i] <= '9'){
+//             num += (str[i] - '0') * pow(16, expo);
+//         }else{
+//             num += (toupper(str[i]) - 55) * pow(16, expo);
+//         }
+//     }
 
-    return(num);
-}
+//     return(num);
+// }
 
 //fazer exercicio 4  Fazer a soma por 10
+void adds_hash(char str[N]){
+    int j = 0;
+    char str2[N];
+    for (int i = 0; str[i] != '\0'; i++){
+        if (str[i] != ' '){
+            str[j++] = str[i];
+        }
+    }
+    str[--j] = '\0';
+
+}
 //int to hexa
 
 int main(){
@@ -105,9 +117,9 @@ int main(){
     int num;
 
     printf("Digite o numero: \n");
-    scanf("%d", &num);
+    gets(str);
 
-    converte_hexadecimal(str);
+    adds_hash(str);
     printf("Numero convertido: %s\n", str);
 
 }
