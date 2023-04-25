@@ -82,7 +82,7 @@ char converte_binario(int num, char str[N]){
     }
 }
 // bug the compiler won't compile because of the POW() function
-// Use """"gcc -o sphere sphere.c -lm"""" to compile the code and """"make ./string"""" to run the code whenever it may be needed
+// Use """"gcc -o string string.c -lm"""" to compile the code and """"make ./string"""" to run the code whenever it may be needed
 // int converte_hexadecimal(char str[N]){
     
 //     int expo = strlen(str)-1, num=0, i;
