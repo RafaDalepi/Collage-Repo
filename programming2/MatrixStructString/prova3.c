@@ -31,7 +31,6 @@ int MenorDeIdade(ASSOCIADO socio[N], DATA atual){
         diaA = atual.dia / 365;
         mesA = atual.mes /12;
 
-        
         if(atual.ano < socio[i].nascimento.ano + 18){
             menores++;
         }else if(atual.mes > socio[i].nascimento.mes && atual.ano < socio[i].nascimento.ano + 18){

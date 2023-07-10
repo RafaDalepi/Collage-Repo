@@ -31,6 +31,7 @@ int CompactaMatriz(int matriz[LINHAS][COLUNAS], int vetor[LINHAS + COLUNAS]){
     for (i = 0; i < LINHAS + COLUNAS; i++){
         printf("%d ", vetor[i]);
     }
+    printf("\n");
     
 }
 
@@ -46,3 +47,5 @@ int main(){
     CompactaMatriz(matriz, vetor);
     
 }
+
+int vet[4] = {0 ,1,2 ,2 ,3 }
