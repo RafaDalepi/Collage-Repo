@@ -47,5 +47,3 @@ int main(){
     CompactaMatriz(matriz, vetor);
     
 }
-
-int vet[4] = {0 ,1,2 ,2 ,3 }

@@ -14,16 +14,11 @@ void PrintMatriz(int matriz[N][N]){
 }
 
 void OrdenaMatriz(int matriz[N][N]){
-    int i, j, aux[N][N], lastPos =0;
+    int i, j, aux[N][N], lastPos = matriz[0][0];
 
     for (i = 0; i < N; i++){
         for(j = 0; j < N; j++){
-            if (matriz[i][j] > matriz[j][j+1]){
-                aux[i][j] = matriz[i][j+1];
-                aux[i][j+1] = matriz[i][j];
-            }else{
-                aux[i][j] = matriz[i][j];
-            }                        
+            
         }
     }
     
@@ -35,8 +30,8 @@ void OrdenaMatriz(int matriz[N][N]){
 int main(){
     int matriz[N][N] = {{6,1,9,1,5},
                         {9,15,32,95,84},
-                        {91,125,342,955,864},
-                        {9312,1315,332,952,8412},
-                        {13129,13125,32,95,84}};
+                        {10,5,8,12,6},
+                        {8,6,2,3,1},
+                        {25,6,32,95,84}};
     OrdenaMatriz(matriz);                 
 }
