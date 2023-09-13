@@ -5,7 +5,7 @@ int total_dias(int mes, int ano){
         return 31;
     } else if (mes == 4 || mes == 6 || mes == 9 || mes == 11){
         return 30;
-    } else if (mes == 2 && ano%4==0){
+    } else if (mes == 2 && ano % 4==0){
         return 29;   
     } else {
         return 28;
