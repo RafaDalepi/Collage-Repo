@@ -10,7 +10,6 @@ typedef struct movements{
     int yt;
 }MOVES;
 
-
 int RookMovement(int board[BoardSize][BoardSize], MOVES move){
     if(move.xf == move.xt || move.yf == move.yt){
         if(move.xf < move.xt || move.yf < move.yt){
